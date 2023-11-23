@@ -20,6 +20,10 @@ const Navbar = () => {
             id: 4,
             link: <Link to="home"> About </Link>
         },
+        {
+            id: 5,
+            link: <Link to="/courseOutline"> Course Outline </Link>
+        },
     ]
     return (
         <>
@@ -45,8 +49,8 @@ const Navbar = () => {
                         ))}
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <Link className=" text-white w-48 bg-transparent border-2 h-12 flex justify-center items-center text-center text-xl" style={{ borderTopLeftRadius: '25px', borderBottomRightRadius: '25px' }}>Login</Link>
+                <div className="navbar-end px-2">
+                    <Link to="login" className=" text-white w-40 lg:w-48 bg-transparent border-2 h-12 flex justify-center items-center text-center text-xl" style={{ borderTopLeftRadius: '25px', borderBottomRightRadius: '25px' }}>Login</Link>
                 </div>
             </div>
             <div className='w-full lg:w-11/12 mx-12 border-b-2 border-dashed h-6' style={{ margin: '0 auto' }}></div>

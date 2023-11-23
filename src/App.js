@@ -1,8 +1,16 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home";
-import CourseDetails from "./components/CourseDetails/CourseDetails";
+
 import Navbar from "./components/share/Navbar";
 import Footer from "./components/share/Footer";
+import CourseOutline from "./components/CourseDetails/CourseOutline";
+// default styling
+import 'reactflow/dist/style.css';
+// or if you just want basic styles
+import 'reactflow/dist/base.css';
+import Login from "./components/User/Login";
+import Register from "./components/User/Register";
+import Profile from "./components/User/Profile";
 
 function App() {
   return (
@@ -10,8 +18,13 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="home" element={<Home />}></Route>
-        <Route path="courseDetails" element={<CourseDetails />}></Route>
+        <Route path="/home" element={<Home />}></Route>
+        <Route path="/courseOutline" element={<CourseOutline />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/register" element={<Register />}></Route>
+        {/* protected route  */}
+        <Route path="/profile" element={<Profile />}></Route>
+
       </Routes>
       <Footer />
     </>
