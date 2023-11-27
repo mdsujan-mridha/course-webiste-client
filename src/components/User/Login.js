@@ -13,8 +13,8 @@ const Login = () => {
 
     return (
         <Fragment>
-            <div className='w-full h-screen flex justify-center items-center'>
-                <div className="w-1/2 h-auto py-5 bg-secondary rounded-md">
+            <div className='w-full h-screen flex lg:justify-center lg:items-center'>
+                <div className="w-full lg:w-1/2 h-auto py-5 bg-secondary rounded-md">
                     <h1
                         className="text-center py-5 text-6xl font-bold border-b-gray-200 border-b-2 border-dashed px-12 text-transparent"
                         style={{
@@ -26,11 +26,11 @@ const Login = () => {
                     >
                         Login
                     </h1>
-                    <div className='flex items-center gap-4 pt-5 px-3 w-full'>
-                        <div className='w-1/2'> <img src={loginImg} alt="" className='rounded-md opacity-50' /> </div>
+                    <div className='flex items-center gap-4 pt-5 px-3 w-full flex-col lg:flex-row'>
+                        <div className='w-full lg:w-1/2'> <img src={loginImg} alt="" className='rounded-md opacity-50' /> </div>
                         <form
                             onSubmit={handleLogin}
-                            className='w-1/2 flex justify-center items-center flex-col gap-5'>
+                            className='w-full lg:w-1/2 flex justify-center items-center flex-col gap-5 mt-5 lg:mt-0'>
                             <input type="email"
                                 placeholder='Enter you email'
                                 className=' w-full p-2 bg-transparent border-b-2 outline-none placeholder:text-gray-50 py-3 rounded-md shadow-2xl'

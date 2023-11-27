@@ -76,8 +76,8 @@ const CoursePdf = () => {
 
     return (
         <div className="w-full h-screen bg-primary text-white">
-            <div className="flex flex-row-reverse justify-around gap-5 py-10 px-12">
-                <div className="w-1/5 bg-secondary rounded-lg">
+            <div className="flex flex-col-reverse lg:flex-row-reverse justify-around gap-5 py-10 px-12">
+                <div className="w-full lg:w-1/5 bg-secondary rounded-lg h-auto pb-5">
                     <h1 className="text-3xl font-bold mb-4 text-center pt-5">Course Content</h1>
                     <div className="flex flex-col px-5 pt-5">
                         {modules.map((module) => (
@@ -103,7 +103,7 @@ const CoursePdf = () => {
                         ))}
                     </div>
                 </div>
-                <div className="w-3/4">
+                <div className="w-full lg:w-3/4">
                     {selectedLecture ? (
                         <div key={selectedLecture.id}>
                             <iframe src={selectedLecture.pdfUrl} width="100%" height="700" title='pdf'></iframe>
