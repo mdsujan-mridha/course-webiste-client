@@ -14,10 +14,12 @@ process.on("uncaughtException", err => {
 });
 
 
-// config with dotenv 
-dotenv.config({ path: "./config/config.env" });
+// config 
+
+dotenv.config({path:"./config/config.env"});
 // database 
 database();
+
 // root endpoint 
 app.get("/", (req, res) => {
     res.send(`server is working with port ${port}`);
