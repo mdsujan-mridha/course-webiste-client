@@ -203,7 +203,73 @@ exports.updateProfile = catchAsyncError(async (req, res, next) => {
         message: "Update your profile",
         user,
     });
-    
+
+});
+
+// get all user by admin 
+exports.getAllUsers = catchAsyncError(async (req, res, next) => {
+    // get all user 
+    const users = await User.find();
+
+    // if user collection is empty then send a error a message 
+    if (!users) {
+        return next(new ErrorHandler("user collection is empty", 401));
+    }
+    res.status(200).json({
+        success: true,
+        users,
+    });
 })
 
+// get single user by admin 
+exports.getAllUser = catchAsyncError(async (req, res, next) => {
 
+    // find user by id 
+    const user = await User.findById(req.body.id);
+    // if user not found then send error message 
+    if (!user) {
+        return next(new ErrorHandler(`User not exist id :${req.params.id}`));
+    }
+    // if user exist then send response with user 
+    res.status(200).json({
+        success: true,
+        user,
+    })
+});
+// update user role 
+exports.updateUserRole = catchAsyncError(async (req, res, next) => {
+    // get user information from body 
+    const newUserData = {
+        name: req.body.name,
+        email: req.body.email,
+        role: req.body.role,
+    };
+    //   find user by id and update user role only   
+    await User.findByIdAndUpdate(req.params.id, newUserData, {
+        new: true,
+        runValidators: true,
+        useFindAndModify: false,
+    });
+    // then send a response 
+    res.status(200).json({
+        success: true,
+        message: 'Successfully update user role'
+    });
+});
+
+// delete user by admin 
+exports.deleteUser = catchAsyncError(async (req, res, next) => {
+    // find user by admin 
+    const user = await User.findById(req.params.id);
+    // if user not found then send a error message 
+    if (!user) {
+        return next(new ErrorHandler(`User does not exist with id ${req.params.id}`));
+    }
+    // if user find then delete user 
+    await user.deleteOne();
+    // if delete user then send response 
+    res.status(200).json({
+        success: true,
+        message: 'User deleted successfully',
+    });
+});
