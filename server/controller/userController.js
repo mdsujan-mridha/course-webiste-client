@@ -2,7 +2,7 @@
 const catchAsyncError = require("../middleware/catchAsyncError");
 const User = require("../model/userModel");
 const sendToken = require("../utils/jwtToken");
-const ErrorHandler = require("../utils/ErrorHanler");
+const ErrorHandler = require("../utils/ErrorHandler");
 const sendEmail = require("../utils/sendEmail");
 const crypto = require("crypto");
 const cloudinary = require("cloudinary");
@@ -225,7 +225,7 @@ exports.getAllUsers = catchAsyncError(async (req, res, next) => {
 exports.getAllUser = catchAsyncError(async (req, res, next) => {
 
     // find user by id 
-    const user = await User.findById(req.body.id);
+    const user = await User.findById(req.params.id);
     // if user not found then send error message 
     if (!user) {
         return next(new ErrorHandler(`User not exist id :${req.params.id}`));
