@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   const menuItem = [
     { id: 1, link: <Link to="home"> Home </Link> },
-    { id: 2, link: <Link to="home"> course </Link> },
+    { id: 2, link: <Link to="/course"> course </Link> },
     { id: 3, link: <Link to="home"> Blog </Link> },
     { id: 4, link: <Link to="home"> About </Link> },
     { id: 5, link: <Link to="/courseOutline"> Course Outline </Link> },

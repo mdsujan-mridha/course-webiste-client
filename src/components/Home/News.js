@@ -24,7 +24,7 @@ const News = (props) => {
 
     return (
         <>
-            <div className='h-auto relative w-full mt-36 mb-24'>
+            <div className='h-auto relative w-full mt-36 mb-36 pb-14'>
                 <h1 className='text-center text-4xl font-bold pb-5'> About latest tips,news and course </h1>
                 <p className='text-center w-96 text-md font-semibold py-5' style={{ margin: '0 auto' }}> Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum ultrices </p>
                 <Carousel
@@ -47,7 +47,7 @@ const News = (props) => {
                     className='mt-20 pb-12 px-12 relative'
                 >
                     <div>
-                        <Link className="card card-compact w-96 shadow-xl bg-transparent">
+                        <Link className="card card-compact w-full lg:w-96 shadow-xl bg-transparent">
                             <figure><img src={Physics} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <p className='Text-center font-bold text-2xl pt-5'>If a dog chews shoes whose shoes does he choose?</p>
@@ -56,7 +56,7 @@ const News = (props) => {
                         </Link>
                     </div>
                     <div>
-                        <Link className="card card-compact w-96 shadow-xl bg-transparent">
+                        <Link className="card card-compact w-full lg:w-96 shadow-xl bg-transparent">
                             <figure><img src={Physics} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <p className='Text-center font-bold text-2xl pt-5'>If a dog chews shoes whose shoes does he choose?</p>
@@ -65,7 +65,7 @@ const News = (props) => {
                         </Link>
                     </div>
                     <div>
-                        <Link className="card card-compact w-96 shadow-xl bg-transparent">
+                        <Link className="card card-compact w-full lg:w-96 shadow-xl bg-transparent">
                             <figure><img src={Physics} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <p className='Text-center font-bold text-2xl pt-5'>If a dog chews shoes whose shoes does he choose?</p>
@@ -74,7 +74,7 @@ const News = (props) => {
                         </Link>
                     </div>
                     <div>
-                        <Link className="card card-compact w-96 shadow-xl bg-transparent">
+                        <Link className="card card-compact w-full lg:w-96 shadow-xl bg-transparent">
                             <figure><img src={Physics} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <p className='Text-center font-bold text-2xl pt-5'>If a dog chews shoes whose shoes does he choose?</p>
@@ -83,7 +83,7 @@ const News = (props) => {
                         </Link>
                     </div>
                     <div>
-                        <Link className="card card-compact w-96 shadow-xl bg-transparent">
+                        <Link className="card card-compact w-full lg:w-96 shadow-xl bg-transparent">
                             <figure><img src={Physics} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <p className='Text-center font-bold text-2xl pt-5'>If a dog chews shoes whose shoes does he choose?</p>

@@ -21,13 +21,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // config 
 
-dotenv.config({path:"./config/config.env"});
+dotenv.config({ path: "./config/config.env" });
 
 const user = require("./routes/userRoutes");
+const pdfCourse = require("./routes/pdfCourseRoutes");
 
-
-
+// user main end point 
 app.use("/api/v1", user);
+// pdf course end point 
+app.use("/api/v1", pdfCourse);
 
 app.use(errorMiddleware);
 module.exports = app;
